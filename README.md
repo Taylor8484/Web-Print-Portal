@@ -89,6 +89,56 @@ The application will be available at `http://localhost:3000`
 
 ---
 
+## Building for Production
+
+### 1. Create a Production Build
+
+To build the application for production deployment:
+
+```bash
+npm run build
+```
+
+This command:
+- Compiles TypeScript to JavaScript
+- Bundles all assets using Vite
+- Minifies code for optimal performance
+- Outputs static files to the `dist/` directory
+
+### 2. Preview the Production Build (Optional)
+
+Before deploying, you can test the production build locally:
+
+```bash
+npm run preview
+```
+
+This starts a local server serving the production build from the `dist/` directory, allowing you to verify everything works as expected.
+
+### 3. Deploy the Build
+
+The `dist/` folder contains all the static files needed for deployment. You can deploy these files to any static hosting service:
+
+**Popular Hosting Options:**
+- **Netlify** - Drag and drop the `dist/` folder or connect your Git repository
+- **Vercel** - Import your repository or use the Vercel CLI
+- **GitHub Pages** - Host directly from your repository
+- **AWS S3** - Upload to an S3 bucket with static website hosting
+- **Traditional Web Server** - Copy `dist/` contents to your web server's public directory (e.g., `/var/www/html`)
+
+**Example: Deploy to a Web Server**
+```bash
+# After building, copy dist contents to your web server
+scp -r dist/* user@yourserver.com:/var/www/html/
+```
+
+**Important Notes:**
+- Ensure your `.env.local` variables are properly configured before building
+- The production build includes your environment variables in the JavaScript bundle
+- Configure your web server to serve `index.html` for all routes (SPA fallback)
+
+---
+
 ## How It Works
 
 1. **User uploads a file** through the drag-and-drop interface
