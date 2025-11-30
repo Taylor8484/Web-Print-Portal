@@ -39,7 +39,7 @@ Built with React and TypeScript, this portal provides a clean interface with dar
 
 ### 1. Clone the Repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Taylor8484/Web-Print-Portal
 cd Web-Print-Portal
 ```
 
