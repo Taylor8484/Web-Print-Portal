@@ -1,5 +1,0 @@
-{
-  "name": "Cadet Web Print Portal",
-  "description": "A simple web interface to send documents to a printer via a webhook. Users can upload a file, specify the number of copies, and submit the print job.",
-  "requestFramePermissions": []
-}
